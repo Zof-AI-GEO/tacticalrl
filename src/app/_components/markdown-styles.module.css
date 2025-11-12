@@ -1,0 +1,95 @@
+.markdown {
+  @apply text-lg leading-relaxed text-white/85;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown h2 {
+  @apply mt-16 mb-6 font-display text-3xl leading-tight text-white md:text-4xl;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.markdown h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+  background: linear-gradient(
+    120deg,
+    rgba(180, 83, 9, 0.65),
+    rgba(67, 61, 103, 0.55)
+  );
+}
+
+.markdown h3 {
+  @apply mt-12 mb-4 font-display text-2xl leading-tight text-white;
+}
+
+.markdown h4 {
+  @apply mt-8 mb-3 text-xl font-semibold text-white/85;
+}
+
+.markdown a {
+  @apply font-semibold text-indigo-200 underline decoration-indigo-400/50 underline-offset-4 transition-colors duration-200 hover:text-indigo-100 hover:decoration-indigo-200;
+}
+
+.markdown strong {
+  @apply font-semibold text-white;
+}
+
+.markdown em {
+  @apply italic text-indigo-200;
+}
+
+.markdown ul {
+  @apply list-disc space-y-2 pl-6 text-white/85;
+}
+
+.markdown ol {
+  @apply list-decimal space-y-2 pl-6 text-white/85;
+}
+
+.markdown blockquote {
+  @apply my-10 border-l-4 border-indigo-400/60 bg-white/5 px-6 py-3 text-base italic text-white/80;
+}
+
+.markdown code {
+  @apply rounded-md bg-white/10 px-2 py-1 text-sm font-mono text-white;
+}
+
+.markdown pre {
+  @apply my-10 overflow-x-auto rounded-3xl bg-slate-900 p-6 text-sm text-white/90 shadow-[0_35px_70px_rgba(15,23,42,0.4)];
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-sm text-white/90;
+}
+
+.markdown img {
+  @apply my-10 w-full rounded-4xl border border-white/15 shadow-[0_30px_60px_rgba(15,23,42,0.45)];
+}
+
+.markdown hr {
+  @apply my-12 border-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent;
+}
+
+.markdown table {
+  @apply my-8 w-full border-collapse overflow-hidden rounded-2xl border border-white/10 bg-white/5;
+}
+
+.markdown th {
+  @apply bg-white/10 px-4 py-3 text-left text-sm font-semibold uppercase tracking-[0.15em] text-white/85;
+}
+
+.markdown td {
+  @apply border-t border-white/10 px-4 py-3 text-sm text-white/80;
+}

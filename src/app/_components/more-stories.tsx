@@ -11,8 +11,6 @@ export function MoreStories({ posts }: Props) {
     return null;
   }
 
-  const featurePosts = posts.slice(0, Math.min(posts.length, 6));
-
   return (
     <section id="deep-dives" className="mt-24 animate-fade-up">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -30,7 +28,7 @@ export function MoreStories({ posts }: Props) {
       </div>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {featurePosts.map((post, idx) => {
+        {posts.map((post, idx) => {
           const isFeature = idx === 0 || idx === 3;
           return (
             <PostPreview

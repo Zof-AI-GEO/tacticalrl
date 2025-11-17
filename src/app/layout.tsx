@@ -2,7 +2,7 @@ import Header from "@/app/_components/header";
 import type { Metadata } from "next";
 import { Space_Grotesk, Newsreader } from "next/font/google";
 import cn from "classnames";
-
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const sans = Space_Grotesk({
@@ -49,6 +49,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 pt-10 md:pt-16">{children}</main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
